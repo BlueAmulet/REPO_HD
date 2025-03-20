@@ -7,11 +7,3 @@ If you are installing this manually, do the following
 1. Extract the archive into a folder. **Do not extract into the game folder.**
 2. Move the contents of `plugins` folder into `<GameDirectory>\BepInEx\plugins`.
 3. Run the game.
-
-## Changelog
-<details>
-<summary>Click to expand</summary>
-
-### 1.0.0
-Initial release.  
-</details>
