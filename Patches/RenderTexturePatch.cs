@@ -9,7 +9,7 @@ namespace REPO_HD.Patches
 	{
 		[HarmonyPostfix]
 		[HarmonyPatch(nameof(RenderTextureMain.Start))]
-		private static void Postfix(ref RenderTextureMain __instance)
+		private static void PostfixStart(ref RenderTextureMain __instance)
 		{
 			if (!Settings.antialiasing.Value)
 			{
@@ -35,6 +35,15 @@ namespace REPO_HD.Patches
 					}
 				}
 			}
+		}
+
+		[HarmonyPrefix]
+		[HarmonyPatch(nameof(RenderTextureMain.Update))]
+		private static void PrefixUpdate(ref RenderTextureMain __instance)
+		{
+			// Force RenderTexture to be the same as the game's resolution
+			__instance.textureWidthOriginal = Screen.width;
+			__instance.textureHeightOriginal = Screen.height;
 		}
 	}
 }
