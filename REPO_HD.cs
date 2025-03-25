@@ -11,7 +11,7 @@ namespace REPO_HD
 		internal const string Name = "REPO_HD";
 		internal const string Author = "BlueAmulet";
 		internal const string ID = Author + "." + Name;
-		internal const string Version = "1.0.1";
+		internal const string Version = "1.0.2";
 
 		internal static ManualLogSource Log;
 
